@@ -1,4 +1,4 @@
-const mongoose=require("mongoos");
+const mongoose=require("mongoose");
 const { model } = require("mongoose");
 
 const postSchema=new mongoose.Schema({
@@ -31,9 +31,12 @@ const postSchema=new mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref:"comment"
     }
-],
-timeStamp:true
+], 
 
-});
+},
+ {
+    timestamps: true
+   }
+);
 
 module.exports= mongoose.model("post",postSchema);

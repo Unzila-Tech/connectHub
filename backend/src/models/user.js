@@ -78,8 +78,12 @@ const userSchema=new mongoose.Schema({
     type:Number,
     default:0
   },
-  timeStamp:true
 
-});
+},
+
+ {
+    timestamps: true
+   }
+);
 
 module.exports=mongoose.model("user",userSchema);

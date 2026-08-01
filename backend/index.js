@@ -10,6 +10,10 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
+app.use("/auth",require("./src/routes/authorizationRoute"));
+app.use("/users",require("./src/routes/userRoute"));
+app.use("/posts",require("./src/routes/postRoute"));
+
 app.get("/",(req,res)=>{
      res.send("connection built");
 });
