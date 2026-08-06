@@ -1,0 +1,41 @@
+.navItem {
+      display: flex;
+      gap: 15px;
+      font-size: 17px;
+      justify-content: flex-end;
+      justify-content: center;
+      height: 60px;
+      width: 100%;
+      text-align: center;
+      padding-top: 15px;
+
+
+}
+
+.btn {
+      background-color: #0A66C2;
+      border-radius: 25px;
+      width: 97px;
+      height: 40px;
+      border: #0A66C2;
+      color: white;
+      font-size: 17px;
+}
+
+.sgnIn {
+      border-radius: 25px;
+      width: 90px;
+      height: 40px;
+      background-color: white;
+      border-color: #0A66C2;
+      color: #0A66C2;
+      font-size: 17px;
+
+}
+
+.logo {
+
+      padding-bottom: 40px;
+      padding-right: 300px;
+
+}
