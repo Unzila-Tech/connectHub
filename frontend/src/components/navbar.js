@@ -1,29 +1,41 @@
 import Link from "next/link";
 import styles from "../styles/navbar.module.css";
+
 export default function Navbar() {
   return (
-    <>
-      <nav className="navbar-expand-lg ">
+    <nav className={styles.navbar}>
+      <div className={styles.navContainer}>
+        
+        {/* Logo */}
+        <Link href="/" className={styles.logo}>
+          <img src="/images/logo.png" alt="ConnectHub Logo" />
+        </Link>
 
-        <div className={styles.navbarNav}>
+        {/* Navigation */}
+        <div className={styles.navLinks}>
+          <Link href="/people">Top Content</Link>
 
-          <div className="" id="">
-            <div className={styles.navItem}>
-              <div className={styles.logo}>
-                <Link href="/"><img src="images/logo.png" alt="logo" style={{ height: '90px', width: '100px', paddingBottom: '40px' }}></img></Link>
-              </div>
-              <Link href="/people">Top Content</Link>
-              <Link href="/people"> people</Link>
-              <Link href="/people">Learning</Link>
-              <Link href="/people">Jobs</Link>
-              <Link href="/people">Games</Link>
-              <Link href="/people"> | Get the app |</Link>
-              <button className={styles.sgnIn}><Link href="/signIn">Sign in</Link></button>
-              <button className={styles.btn}><Link href="/signUp">join now</Link></button>
-            </div>
-          </div>
+          <Link href="/people">People</Link>
+
+          <Link href="/learning">Learning</Link>
+
+          <Link href="/jobs">Jobs</Link>
+
+          <Link href="/games">Games</Link>
+
+          <span className={styles.divider}></span>
+
+          <Link href="/get-app">Get the app</Link>
+
+          <Link href="/signIn" className={styles.signIn}>
+            Sign in
+          </Link>
+
+          <Link href="/signUp" className={styles.joinNow}>
+            Join now
+          </Link>
         </div>
-      </nav>
-    </>
+      </div>
+    </nav>
   );
 }

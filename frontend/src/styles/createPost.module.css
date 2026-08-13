@@ -1,0 +1,270 @@
+body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f4f2ee;
+      color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+    }
+
+    /* Main Container for Feed */
+    .feedContainer {
+      width: 100%;
+      max-width: 550px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    /* Shared Card Styling */
+    .card {
+      background-color: #ffffff;
+      border: 1px solid #e0dfdc;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* 1. START A POST CARD */
+    .createPostCard {
+      padding: 12px 16px 8px;
+    }
+
+    .createPostInputContainer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .userAvatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .startPostBtn {
+      flex: 1;
+      height: 48px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 35px;
+      background-color: #ffffff;
+      padding: 0 16px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .startPostBtn:hover {
+      background-color: #f3f3f3;
+    }
+
+    .createPostActions {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 4px;
+    }
+
+    .actionItem {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      border: none;
+      padding: 10px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+    }
+
+    .actionItem:hover {
+      background-color: #f3f3f3;
+    }
+
+    
+    /* SORT BAR */
+    .sortBar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 4px;
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.6);
+      padding: 4px 0;
+    }
+
+    .sortBar strong {
+      color: rgba(0, 0, 0, 0.9);
+      cursor: pointer;
+    }
+
+    /* 2. RECOMMENDED FOR YOU CARD */
+    .recommendedCard {
+      padding-top: 16px;
+    }
+
+    .recommendedTitle {
+      font-size: 16px;
+      font-weight: 600;
+      padding: 0 16px 12px;
+    }
+
+    .recItem {
+      display: flex;
+      padding: 12px 16px;
+      gap: 12px;
+      border-top: 1px solid #ebebeb;
+    }
+
+    .recLogo {
+      width: 48px;
+      height: 48px;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    .recInfo {
+      flex: 1;
+    }
+
+    .recName {
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.9);
+      line-height: 1.2;
+    }
+
+    .recDesc {
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.6);
+      margin-top: 2px;
+      line-height: 1.3;
+    }
+
+    .recSub {
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.6);
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .followBtn {
+      align-self: flex-start;
+      border: 1px solid #0a66c2;
+      color: #0a66c2;
+      background: transparent;
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: background-color 0.2s, border-width 0.1s;
+    }
+
+    .followBtn:hover {
+      background-color: #e8f4f9;
+      box-shadow: inset 0 0 0 1px #0a66c2;
+    }
+
+    .showMoreBtn {
+      width: 100%;
+      padding: 12px;
+      background: transparent;
+      border: none;
+      border-top: 1px solid #ebebeb;
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .showMoreBtn:hover {
+      background-color: #f3f3f3;
+    }
+
+    /* 3. POST CARD */
+    .postCard {
+      padding: 12px 16px;
+    }
+
+    .postHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    .postAuthorDetails {
+      display: flex;
+      gap: 12px;
+    }
+
+    .postAuthorLogo {
+      width: 48px;
+      height: 48px;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    .authorName {
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .authorFollowers {
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    .postType {
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    .moreOptionsBtn {
+      background: none;
+      border: none;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 16px;
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 50%;
+    }
+
+    .moreOptionsBtn:hover {
+      background-color: #f3f3f3;
+    }
+
+    .postContent {
+      font-size: 14px;
+      line-height: 1.4;
+      color: rgba(0, 0, 0, 0.9);
+      margin-top: 8px;
+    }
+
+    .postImage {
+      width: calc(100% + 32px);
+      margin: 12px -16px 0 -16px;
+      max-height: 400px;
+      object-fit: cover;
+    }
+
+
+    

@@ -1,10 +1,11 @@
 import { useState } from "react";
-
+import { useRouter } from "next/router";
+import axios from "axios";
 
 import Link from "next/link";
 import styles from "../styles/register.module.css";
 export default function Register() {
-
+ const router = useRouter();
     const [formData, setFormData] = useState({
   firstName: "",
   lastName: "",
@@ -34,8 +35,10 @@ const handleSubmit = async (e) => {
     console.log(data);
 
     if (response.ok) {
+      
       alert("Signup Successful");
-        
+
+      router.push("/home"); 
     } else {
       alert(data.message);
     }

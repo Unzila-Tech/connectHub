@@ -23,27 +23,35 @@ const getProfile = async (req, res) => {
 
 // update profile
 const updateProfile = async (req, res) => {
+  try {
+    const user = await User.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      {
+        new: true,
+        runValidators: true,
+      }
+    );
 
-    try {
-
-        const user = await User.findByIdAndUpdate(
-            req.params.id,
-            req.body,
-            { new: true }
-        );
-
-        res.json(user);
-
-    } catch (error) {
-
-        res.status(500).json({
-            message: error.message
-        });
-
+    if (!user) {
+      return res.status(404).json({
+        message: "User not found",
+      });
     }
 
-};
+    res.status(200).json({
+      message: "Profile updated successfully",
+      user: user,
+    });
 
+  } catch (error) {
+    console.error("UPDATE PROFILE ERROR:", error);
+
+    res.status(500).json({
+      message: error.message,
+    });
+  }
+};
 
 // get all users
 const getAllUsers = async (req, res) => {
